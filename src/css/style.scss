@@ -88,8 +88,12 @@ header {
       display: block;
       font-size: 2rem;
       margin-left: 1.5rem;
+      transition: all 200ms ease;
       a {
         color: inherit;
+      }
+      &:hover {
+          color: $bruin;
       }
     }
   }
