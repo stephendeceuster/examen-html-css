@@ -179,10 +179,13 @@ header {
     a.button {
       display: inline-block;
       font-family: $raleway;
+      font-weight: 800;
+      font-size: 14px;
       background-color: $bruin;
       min-width: 10.5rem;
       padding: 1.25rem 2.5rem;
       text-transform: uppercase;
+      letter-spacing: 2px;
       color: $wit;
       text-decoration: none;
       transition: all 200ms ease;
