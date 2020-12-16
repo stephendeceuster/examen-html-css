@@ -132,11 +132,16 @@ header {
         margin: 0.5rem;
         background-color: $lichtgrijs;
         border: 2px solid transparent;
+        transition: all 200ms ease;
         &--active {
-          width: 16px;
-          height: 16px;
+          width: 14px;
+          height: 14px;
           background-color: transparent;
           border: 2px solid $bruin;
+        }
+        &:hover {
+          border: 2px solid $bruin;
+          background-color: transparent;
         }
       }
     }
