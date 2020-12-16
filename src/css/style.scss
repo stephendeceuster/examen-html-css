@@ -95,6 +95,7 @@ header {
 }
 
 .hero {
+    position: relative;
     background-color: $grijs;
     background-image: url('./../../img/background.jpg');
     background-size: cover;
@@ -118,6 +119,26 @@ header {
     }
     .hero__slidernav {
         position: absolute;
+        bottom: 2.5rem;
+        .slidernav {
+            display: flex;
+            align-items: center;
+            .slidernav__item {
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin: 0.5rem;
+                background-color: $grijs;
+                border: 2px solid transparent;
+                &--active {
+                    width: 16px;
+                    height: 16px;
+                    background-color: transparent;
+                    border: 2px solid $bruin;
+                }
+            }
+        }
     }
     .hero__text {
         width: 70%;
@@ -156,6 +177,18 @@ header {
             &:hover {
                 background-color: $donkerbruin;
             }
+        }
+    }
+}
+@media screen and (max-width: 55em) {
+    .hero {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+        .hero__button__previous {
+            font-size: 3rem;
+        }
+        .hero__button__next {
+            font-size: 3rem;
         }
     }
 }
