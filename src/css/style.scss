@@ -111,12 +111,20 @@ header {
     color: inherit;
     font-size: 5rem;
     left: 5%;
+    transition: all 200ms ease;
+    &:hover {
+      color: $bruin;
+    }
   }
   .hero__button__next {
     position: absolute;
     color: inherit;
     font-size: 5rem;
     right: 5%;
+    transition: all 200ms ease;
+    &:hover {
+      color: $bruin;
+    }
   }
   .hero__slidernav {
     position: absolute;
