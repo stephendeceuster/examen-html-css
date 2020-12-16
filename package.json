@@ -1,0 +1,26 @@
+{
+  "name": "examen-html-css",
+  "version": "1.0.0",
+  "description": "examen-html-css",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm-run-all --parallel sass-dev server-dev",
+    "sass-dev": "sass ./src/css/style.scss ./dist/css/style.css --watch",
+    "server-dev": "live-server",
+    "build": "npm-run-all --serial clean sass-prod",
+    "clean": "rm -r ./dist/ ",
+    "sass-prod": "sass ./src/css/style.scss ./dist/css/style.css --no-source-map --style=compressed",
+    "deploy": "surge . --domain https://examen-html-css-stephen.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephendeceuster/examen-html-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephendeceuster/examen-html-css/issues"
+  },
+  "homepage": "https://github.com/stephendeceuster/examen-html-css#readme"
+}

@@ -1,0 +1,25 @@
+@use './base/reset';
+@use './base/fonts';
+@use './base/variables' as *;
+@use './base/mixins';
+@import "./../../icons/style.css";
+
+body {
+    font-family: $montserrat;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    background-color: green;
+    color: $wit;
+    .container {
+        width: 60%;
+        margin: 0 auto;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
