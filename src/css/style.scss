@@ -5,21 +5,157 @@
 @import "./../../icons/style.css";
 
 body {
-    font-family: $montserrat;
+  font-family: $montserrat;
+  font-weight: 300;
 }
 
 header {
-    position: absolute;
-    width: 100%;
-    background-color: green;
-    color: $wit;
-    .container {
-        width: 60%;
-        margin: 0 auto;
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  color: $wit;
+  .container {
+    width: 90%;
+    max-width: 74rem;
+    margin: 0 auto;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0;
+      .logo {
+        text-decoration: none;
+        color: inherit;
+        font-family: $raleway;
+        font-size: 34px;
+        display: flex;
+        align-items: center;
+        svg {
+          font-size: 3rem;
+        }
+        .logo__text {
+          margin-left: 0.5rem;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li a {
+          padding: 0.5rem;
+          margin: 0.75rem;
+          color: inherit;
+          text-decoration: none;
+          transition: all 200ms ease;
+          &:hover {
+            color: $bruin;
+          }
+        }
+      }
+      .search a {
+        color: inherit;
+        font-size: 1.75rem;
+        transition: all 200ms ease;
+        &:hover {
+          color: $bruin;
+        }
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 70em) {
+  header .container nav ul li a {
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 55em) {
+  header .container nav {
+    justify-content: flex-start;
+    .logo {
+        margin-right: auto;
+    }
+    ul {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+      font-size: 2rem;
+      margin-left: 1.5rem;
+      a {
+          color: inherit;
+      }
+    }
+  }
+}
+
+.hero {
+    background-color: $grijs;
+    background-image: url('./../../img/background.jpg');
+    background-size: cover;
+    color: white;
+    padding-top : 23.125rem;
+    padding-bottom: 23.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hero__button__previous {
+        position: absolute;
+        color: inherit;
+        font-size: 5rem;
+        left: 5%;
+    }
+    .hero__button__next {
+        position: absolute;
+        color: inherit;
+        font-size: 5rem;
+        right: 5%;
+    }
+    .hero__slidernav {
+        position: absolute;
+    }
+    .hero__text {
+        width: 70%;
+        max-width: 37.5rem;
+        text-align: center;
+        h2 {
+            font-family: $raleway;
+            font-weight: 500;
+            font-size: 36px;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-family: $raleway;
+            font-weight: 800;
+            font-size: 52px;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-family: $montserrat;
+            font-size: 16px;
+            margin-bottom: 3rem;
+            line-height: 24px;
+        }
+        a.button {
+            display: inline-block;
+            font-family: $raleway;
+            background-color: $bruin;
+            min-width: 10.5rem;
+            padding: 1.25rem 2.5rem;
+            text-transform: uppercase;
+            color: $wit;
+            text-decoration: none;
+            transition: all 200ms ease;
+            border-radius: 2px;
+            box-shadow: 0 3px $donkerbruin;
+            &:hover {
+                background-color: $donkerbruin;
+            }
         }
     }
 }

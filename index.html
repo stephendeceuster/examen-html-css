@@ -12,7 +12,12 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo"><img class="logo__img" src="./img/logo.png" alt="" /><span class="logo__text">Raleway</span></a>
+                <a href="#" class="logo">
+                    <svg class="icon icon-logo">
+                        <use xlink:href="./icons/symbol-defs.svg#icon-logo"></use>
+                    </svg>
+                    <span class="logo__text">Raleway</span>
+                </a>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About us</a></li>
@@ -22,27 +27,54 @@
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <div class="hamburger">HAMBURGER</div>
-                <div class="search">ICON HERE</div>
+                <div class="search">
+                    <a href="#">
+                        <svg class="icon icon-search">
+                            <use xlink:href="./icons/symbol-defs.svg#icon-search"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <a href="#">
+                        <svg class="icon icon-menu">
+                            <use xlink:href="./icons/symbol-defs.svg#icon-menu"></use>
+                        </svg>
+                    </a>
+                </div>
             </nav>
         </div>
     </header>
     <section class="hero">
-            <div class="hero__text">
-                <h2>Some slogan here</h2>
-                <h1>Our amazing tagline</h1>
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-                <a href="#" class="button">Click me</a>
-            </div>
-            <div class="hero__slidernav">
-                <ul class="slidernav">
-                    <li><a class="slidernav__item" href="#"></a></li>
-                    <li><a class="slidernav__item slidernav__item--active" href="#"></a></li>
-                    <li><a class="slidernav__item" href="#"></a></li>
-                    <li><a class="slidernav__item" href="#"></a></li>
-                    <li><a class="slidernav__item" href="#"></a></li>
-                </ul>
-            </div>
+
+        <a href="#" class="hero__button__previous">
+            <svg class="icon icon-left">
+                <use xlink:href="./icons/symbol-defs.svg#icon-left"></use>
+            </svg>
+        </a>
+
+        <div class="hero__text">
+            <h2>Some slogan here</h2>
+            <h1>Our amazing tagline</h1>
+            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
+                facer possim assum.</p>
+            <a href="#" class="button">Click me</a>
+        </div>
+
+        <a href="#" class="hero__button__next">
+            <svg class="icon icon-right">
+                <use xlink:href="./icons/symbol-defs.svg#icon-right"></use>
+            </svg>
+        </a>
+
+        <div class="hero__slidernav">
+            <ul class="slidernav">
+                <li><a class="slidernav__item" href="#"></a></li>
+                <li><a class="slidernav__item slidernav__item--active" href="#"></a></li>
+                <li><a class="slidernav__item" href="#"></a></li>
+                <li><a class="slidernav__item" href="#"></a></li>
+                <li><a class="slidernav__item" href="#"></a></li>
+            </ul>
+        </div>
     </section>
     <section class="services">
         <article class="design">
@@ -51,26 +83,26 @@
             <p>
                 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
             </p>
-          </article>
-          <article class="develoment">
+        </article>
+        <article class="develoment">
             ICON
             <h2>Development</h2>
             <p>
-                Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.            </p>
-          </article>
-          <article class="customization">
+                Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. </p>
+        </article>
+        <article class="customization">
             ICON
             <h2>Customization</h2>
             <p>
                 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
             </p>
-          </article>
-          <article class="marketing">
+        </article>
+        <article class="marketing">
             ICON
             <h2>Marketing</h2>
             <p>
-                Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.            </p>
-          </article>
+                Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. </p>
+        </article>
     </section>
 </body>
 
