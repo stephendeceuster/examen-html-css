@@ -1,7 +1,7 @@
 @use './base/reset';
 @use './base/fonts';
 @use './base/variables' as *;
-@use './base/mixins';
+@use './base/mixins' as *;
 @import "./../../icons/style.css";
 
 body {
@@ -14,6 +14,7 @@ header {
   width: 100%;
   background: transparent;
   color: $wit;
+  z-index: 10;
   .container {
     width: 90%;
     max-width: 74rem;
@@ -78,7 +79,7 @@ header {
   header .container nav {
     justify-content: flex-start;
     .logo {
-        margin-right: auto;
+      margin-right: auto;
     }
     ul {
       display: none;
@@ -88,107 +89,179 @@ header {
       font-size: 2rem;
       margin-left: 1.5rem;
       a {
-          color: inherit;
+        color: inherit;
       }
     }
   }
 }
 
 .hero {
-    position: relative;
-    background-color: $grijs;
-    background-image: url('./../../img/background.jpg');
-    background-size: cover;
-    color: white;
-    padding-top : 23.125rem;
-    padding-bottom: 23.125rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .hero__button__previous {
-        position: absolute;
-        color: inherit;
-        font-size: 5rem;
-        left: 5%;
+  position: relative;
+  background-color: $grijs;
+  background-image: url("./../../img/background.jpg");
+  background-size: cover;
+  color: white;
+  padding-top: 23.125rem;
+  padding-bottom: 23.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hero__button__previous {
+    position: absolute;
+    color: inherit;
+    font-size: 5rem;
+    left: 5%;
+  }
+  .hero__button__next {
+    position: absolute;
+    color: inherit;
+    font-size: 5rem;
+    right: 5%;
+  }
+  .hero__slidernav {
+    position: absolute;
+    bottom: 2.5rem;
+    .slidernav {
+      display: flex;
+      align-items: center;
+      .slidernav__item {
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0.5rem;
+        background-color: $lichtgrijs;
+        border: 2px solid transparent;
+        &--active {
+          width: 16px;
+          height: 16px;
+          background-color: transparent;
+          border: 2px solid $bruin;
+        }
+      }
     }
-    .hero__button__next {
-        position: absolute;
-        color: inherit;
-        font-size: 5rem;
-        right: 5%;
+  }
+  .hero__text {
+    width: 70%;
+    max-width: 37.5rem;
+    text-align: center;
+    h2 {
+      font-family: $raleway;
+      font-weight: 500;
+      font-size: 36px;
+      margin-bottom: 1rem;
     }
-    .hero__slidernav {
-        position: absolute;
-        bottom: 2.5rem;
-        .slidernav {
-            display: flex;
-            align-items: center;
-            .slidernav__item {
-                display: block;
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                margin: 0.5rem;
-                background-color: $grijs;
-                border: 2px solid transparent;
-                &--active {
-                    width: 16px;
-                    height: 16px;
-                    background-color: transparent;
-                    border: 2px solid $bruin;
-                }
-            }
-        }
+    h1 {
+      font-family: $raleway;
+      font-weight: 800;
+      font-size: 52px;
+      margin-bottom: 1rem;
     }
-    .hero__text {
-        width: 70%;
-        max-width: 37.5rem;
-        text-align: center;
-        h2 {
-            font-family: $raleway;
-            font-weight: 500;
-            font-size: 36px;
-            margin-bottom: 1rem;
-        }
-        h1 {
-            font-family: $raleway;
-            font-weight: 800;
-            font-size: 52px;
-            margin-bottom: 1rem;
-        }
-        p {
-            font-family: $montserrat;
-            font-size: 16px;
-            margin-bottom: 3rem;
-            line-height: 24px;
-        }
-        a.button {
-            display: inline-block;
-            font-family: $raleway;
-            background-color: $bruin;
-            min-width: 10.5rem;
-            padding: 1.25rem 2.5rem;
-            text-transform: uppercase;
-            color: $wit;
-            text-decoration: none;
-            transition: all 200ms ease;
-            border-radius: 2px;
-            box-shadow: 0 3px $donkerbruin;
-            &:hover {
-                background-color: $donkerbruin;
-            }
-        }
+    p {
+      font-family: $montserrat;
+      font-size: 16px;
+      margin-bottom: 3rem;
+      line-height: 24px;
     }
+    a.button {
+      display: inline-block;
+      font-family: $raleway;
+      background-color: $bruin;
+      min-width: 10.5rem;
+      padding: 1.25rem 2.5rem;
+      text-transform: uppercase;
+      color: $wit;
+      text-decoration: none;
+      transition: all 200ms ease;
+      border-radius: 2px;
+      box-shadow: 0 3px $donkerbruin;
+      &:hover {
+        background-color: $donkerbruin;
+      }
+    }
+  }
 }
 @media screen and (max-width: 55em) {
-    .hero {
-        padding-top: 15rem;
-        padding-bottom: 15rem;
-        .hero__button__previous {
-            font-size: 3rem;
-        }
-        .hero__button__next {
-            font-size: 3rem;
-        }
+  .hero {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    .hero__button__previous {
+      font-size: 3rem;
     }
+    .hero__button__next {
+      font-size: 3rem;
+    }
+  }
+}
+
+section.services {
+  background-color: $wit;
+  color: $grijs;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .container {
+    width: 90%;
+    max-width: 74rem;
+    margin: 0 auto;
+    @include make-col(4, 2rem);
+    article {
+      text-align: center;
+      position: relative;
+      .picto {
+        font-size: 52px;
+        margin-bottom: 20px;
+        color: $grijs;
+        transition: all 200ms ease;
+      }
+      h2 {
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 22px;
+        color: $grijs;
+        margin-bottom: 1rem;
+        transition: all 200ms ease;
+      }
+      p {
+        font-family: $montserrat;
+        font-weight: 300;
+        font-size: 14px;
+        color: $lichtgrijs;
+        line-height: 22px;
+        margin-bottom: 4rem;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 2rem;
+        left: calc(50% - 36px);
+        height: 2px;
+        width: 72px;
+        background-color: $beige;
+        transition: all 200ms ease;
+      }
+      &:hover {
+        .picto {
+          color: $bruin;
+        }
+        h2 {
+          color: $bruin;
+        }
+        &::after {
+          background-color: $bruin;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 55em) {
+  section.services .container {
+    @include make-col(2, 2rem);
+  }
+}
+
+@media screen and (max-width: 35em) {
+  section.services .container {
+    @include make-col(1, 1rem);
+  }
 }
