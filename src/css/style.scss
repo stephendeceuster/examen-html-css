@@ -103,7 +103,9 @@ header {
   position: relative;
   background-color: $grijs;
   background-image: url("./../../img/background.jpg");
+  background-position: center;
   background-size: cover;
+  min-height: 100vh;
   color: white;
   padding-top: 23.125rem;
   padding-bottom: 23.125rem;
